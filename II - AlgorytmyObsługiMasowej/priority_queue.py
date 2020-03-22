@@ -1,38 +1,55 @@
-capacity = 10;
-
-class Item:
-
-  def __init__(self, value, priority):
-    self.value = value
-    self.priority = priority
-
 class PriorityQueue:
     def __init__(self):
-        self.queue = []
+        self.PQueue = []
 
-    def insert(self, item):
-        if self.size() == 0:
-            self.queue.append(item)
+    def __str__(self):
+        if self.isEmpty():
+            return "Kolejka jest pusta"
         else:
-            for x in range(0, self.size()):
-                # if the priority of new node is greater
-                if item.priority >= self.queue[x].priority:
-                    # if we have traversed the complete queue
-                    if x == (self.size()-1):
-                        # add new node at the end
-                        self.queue.insert(x+1, item)
-                    else:
-                        continue
-                else:
-                    self.queue.insert(x, item)
-          return True
+            return str(self.PQueue)
 
-    def delete(self):
-        return self.queue.pop(0)
+    def isEmpty(self):
+        if len(self.PQueue) == 0:
+            return True
+        else:
+            return False
 
-    def show(self):
-        for x in self.queue:
-            print(str(x.info) + " - " + str(x.priority))
+    def Front(self):
+        return self.PQueue[0]
 
-    def size(self):
-        return len(self.queue)
+    def Size(self):
+        return len(self.PQueue)
+
+    def Push(self, end, priority):
+        if not self.isEmpty():
+            for i in range(len(self.PQueue)):
+                if self.PQueue[i][1] > priority:
+                    self.PQueue.insert(i, (end, priority))
+                    break
+                elif self.PQueue[i][1] == priority:
+                    if self.PQueue[i][0] > end:
+                        self.PQueue.insert(i, (end, priority))
+                        break
+                    elif self.PQueue[i][0] == end:
+                        print("Taki element już istnieje")
+                        break
+                elif i == len(self.PQueue) - 1:
+                    self.PQueue.append((end, priority))
+        else:
+            self.PQueue.append((end, priority))
+
+    def Pop(self):
+        if self.isEmpty():
+            return print("Kolejka jest pusta")
+        else:
+            self.PQueue.pop(len(self.PQueue) - 1)
+
+
+q = PriorityQueue()
+
+q.Push('el1', 3)
+q.Push('el2', 1)
+q.Push('el3', 5)
+q.Push('el4', 7)
+q.Push('el5', 2)
+print(q)

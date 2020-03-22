@@ -6,7 +6,6 @@
 
 capacity = 10
 
-
 class Queue:
     def __init__(self):
         self.capacity = capacity
@@ -24,9 +23,9 @@ class Queue:
     def is_empty(self):
         return self.items == []
 
-    def enqueue(self, data):
+    def enqueue(self, item):
         if not self.is_full():
-            self.items[self.rear] = data
+            self.items[self.rear] = item
             self.rear = int((self.rear + 1) % self.capacity)
             self.size += 1
         else:
@@ -43,11 +42,11 @@ class Queue:
 
 q = Queue()
 
-q.enqueue(1)
-q.enqueue(5)
-q.enqueue(3)
-q.enqueue(6)
-q.enqueue(-2)
+q.enqueue(2)
+q.enqueue(4)
+q.enqueue(7)
+q.enqueue(45)
+q.enqueue(-43)
 print(q)
 q.dequeue()
 print(q)
