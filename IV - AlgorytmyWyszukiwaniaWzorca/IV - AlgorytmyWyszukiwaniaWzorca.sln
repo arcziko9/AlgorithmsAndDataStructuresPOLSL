@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "IV - AlgorytmyWyszukiwaniaWzorca", "IV - AlgorytmyWyszukiwaniaWzorca\IV - AlgorytmyWyszukiwaniaWzorca.pyproj", "{6FD5EA6A-E792-4576-AF90-E7660F33FCD5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6FD5EA6A-E792-4576-AF90-E7660F33FCD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FD5EA6A-E792-4576-AF90-E7660F33FCD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9AD9271B-B732-4205-8D72-487762E7EA0B}
+	EndGlobalSection
+EndGlobal
